@@ -1,11 +1,18 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+st.set_page_config(page_title='EDA - vehicles_us.csv', layout='wide', page_icon='🚗')
 
 st.header('Analisis Exploratorio de Datos de Vehiculos Usados')
 
 #-------Carga inicial de los datos-------
-data = pd.read_csv('vehicles_us.csv')
+@st.cache_data
+def load_data(): # <<--- Necesitas la función aquí
+    return pd.read_csv('vehicles_us.csv')
+
+data = load_data()
+
+#-------Vista previa de los datos-------
 with st.expander('Vista previa de los datos'):
     st.write(data.head(50))
 
