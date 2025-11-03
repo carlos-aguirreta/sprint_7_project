@@ -9,7 +9,7 @@ Para ejecutar este proyecto, necesitas Python 3.x y las dependencias listadas en
 **Contenido de `requirements.txt`:**
 
 # 📁 Estructura del código
-raiz
+```bash
 .
 ├── README.md
 ├── app.py
@@ -17,6 +17,7 @@ raiz
 ├── requirements.txt
 └── notebooks
     └── EDA.ipynb
+```
 
 # 💡 Uso de la Aplicación
 La aplicación creada permite acceder a una muestra de los datos del archivo `vehicles_us.csv` al hacer click en la pestaña 'vista previa de los datos'.
